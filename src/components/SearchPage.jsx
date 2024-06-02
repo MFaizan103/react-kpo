@@ -4,6 +4,8 @@ import { FaPersonCircleQuestion } from "react-icons/fa6";
 import { FaPersonFalling } from "react-icons/fa6";
 import { FaMobile } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
+import { FaChildren } from "react-icons/fa6";
+
 import Breadcrumbs from "./BreadCrumbs";
 import { useLocation } from "react-router-dom";
 
@@ -34,6 +36,11 @@ const SearchPage = () => {
       title: "Recovered Vehicle",
       icon: <FaCar size={"48px"} />,
       link: "",
+    },
+    {
+      title: "Recovered Missing Children",
+      icon: <FaChildren size={"48px"} />,
+      link: "/SearchRecoveredMissingChildren",
     },
   ];
 

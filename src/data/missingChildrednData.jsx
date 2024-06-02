@@ -1,0 +1,51 @@
+const missingChildren = [
+  {
+    name: "Mehdi",
+    gender:"Boy",
+    age:"14 Years",
+    b_form: "42301-86325698-8",
+    fatherName: "Razzak",
+    fatherCNIC:"42301-1234568-8",
+    fatherContact: "0318-12345689",
+    address: "Steel Town, Malir",
+    fir:"21/2021",
+    underSection:"364-A-PPC",
+    district:"South",
+    policeStation:"Saddar",
+    image: "/childImage1.jpg",
+  },
+  {
+    name: "Imran",
+    gender:"Boy",
+    age:"14 Years",
+    b_form: "42301-86325698-8",
+    fatherName: "Razzak",
+    fatherCNIC:"42301-1234568-8",
+    fatherContact: "0318-12345689",
+    address: "Steel Town, Malir",
+    fir:"21/2021",
+    underSection:"364-A-PPC",
+    district:"South",
+    policeStation:"Saddar",
+    image: "/childImage1.jpg",
+  },
+  {
+    name: "Faizan",
+    gender:"Boy",
+    age:"14 Years",
+    b_form: "42301-86325698-8",
+    fatherName: "Razzak",
+    fatherCNIC:"42301-1234568-8",
+    fatherContact: "0318-12345689",
+    address: "Steel Town, Malir",
+    fir:"21/2021",
+    underSection:"364-A-PPC",
+    district:"South",
+    policeStation:"Saddar",
+    image: "/childImage1.jpg",
+  },
+
+];
+
+
+export default missingChildren;

@@ -57,22 +57,22 @@ const Navbar = () => {
               >
                 Notification
               </Link>
-              <Link to="/Jobs" className="text-white hover:text-gray-300">
+              <Link to="" className="text-white hover:text-gray-300">
                 Jobs
               </Link>
-              <Link to="/AboutUs" className="text-white hover:text-gray-300">
+              <Link to="" className="text-white hover:text-gray-300">
                 About Us
               </Link>
             </div>
             <div className="flex flex-col md:flex-row md:space-x-5 space-y-2 md:space-y-0 mt-2 md:mt-0">
               <Link
-                to="/Login"
+                to=""
                 className="text-white text-sm flex items-center"
               >
                 Login
               </Link>
               <Link
-                to="/Signup"
+                to=""
                 className="text-white text-sm flex items-center"
               >
                 Signup

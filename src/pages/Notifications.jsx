@@ -1,69 +1,111 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Notifications = () => {
   const [query, setQuery] = useState("");
+  const [activeTab, setActiveTab] = useState("notifications"); // State to manage active tab
+  const { history } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [history]);
   const notification = [
     {
-      title: "New Sindh Police Job Annoucement",
-      detail: "Details of the job of sindh police for the position of ASI",
+      title: "New Sindh Police Job Announcement",
+      detail: "Details of the job of Sindh police for the position of ASI",
       date: "20-05-2024",
       time: "12:00 PM",
     },
     {
       title: "SSU",
-      detail: "Details of the job of sindh police for the position of ASI",
+      detail: "Details of the job of Sindh police for the position of ASI",
       date: "20-05-2024",
       time: "12:00 PM",
     },
     {
-      title: "ASI Jobs",
-      detail: "Details of the job of sindh police for the position of ASI",
+      title: "SSU",
+      detail: "Details of the job of Sindh police for the position of ASI",
       date: "20-05-2024",
       time: "12:00 PM",
     },
     {
-      title: "New Sindh Police Job Annoucement",
-      detail: "Details of the job of sindh police for the position of ASI",
+      title: "SSU",
+      detail: "Details of the job of Sindh police for the position of ASI",
       date: "20-05-2024",
       time: "12:00 PM",
     },
-    {
-      title: "New Sindh Police Job Annoucement",
-      detail: "Details of the job of sindh police for the position of ASI",
-      date: "20-05-2024",
-      time: "12:00 PM",
-    },
+    // Other notifications
   ];
 
-  const [items, setItems] = useState(notification);
+  const orders = [
+    {
+      title: "Order 1",
+      detail: "Details of order 1",
+      date: "20-05-2024",
+      time: "12:00 PM",
+    },
+    {
+      title: "Order 2",
+      detail: "Details of order 2",
+      date: "20-05-2024",
+      time: "12:00 PM",
+    },
+    {
+      title: "Order 2",
+      detail: "Details of order 2",
+      date: "20-05-2024",
+      time: "12:00 PM",
+    },
+    {
+      title: "Order 2",
+      detail: "Details of order 2",
+      date: "20-05-2024",
+      time: "12:00 PM",
+    },
+    // Other orders
+  ];
+
+  const items = activeTab === "notifications" ? notification : orders; // List based on active tab
+
   const handleSearch = (e) => {
     setQuery(e.target.value);
   };
-  const resullt = items.filter((item) =>
+
+  const filteredItems = items.filter((item) =>
     item.title.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
-    <div className="py-8 ">
-      <h1 className="text-center text-3xl text-white font-medium">
-        Notifications
+    <div className="py-8">
+      <h1 className="text-center text-3xl text-white font-medium ">
+        {activeTab === "notifications" ? "Notifications" : "Orders"}
       </h1>
 
-      <div className="flex justify-center  items-center gap-5 p-4  max-w-fit mx-auto ">
-        <button className="p-4 bg-red-600 rounded-lg font-semibold shadow-xl text-xl text-white min-w-48">
+      <div className="flex justify-center items-center gap-5 p-4 w-full mx-auto">
+        <button
+          onClick={() => setActiveTab("notifications")}
+          className={`p-4 ${
+            activeTab === "notifications"
+              ? "bg-red-600 text-white"
+              : "bg-slate-200 text-slate-700"
+          } rounded-lg font-semibold shadow-xl lg:text-xl text-white lg:min-w-48 md:min-w-48 sm:min-w-48`}
+        >
           Notifications
         </button>
-        <button className="p-4 rounded-lg font-semibold bg-slate-200 hover:bg-red-600 hover:text-white text-xl min-w-48">
+        <button
+          onClick={() => setActiveTab("orders")}
+          className={`p-4 ${
+            activeTab === "orders"
+              ? "bg-red-600 text-white"
+              : "bg-slate-200 text-slate-700"
+          } rounded-lg font-semibold shadow-xl lg:text-xl text-white lg:min-w-48   md:min-w-48 sm:min-w-48`}
+        >
           Orders
         </button>
       </div>
 
       {/* Search */}
-
       <div className="flex w-full justify-center py-8">
-        <label htmlFor="search"></label>
         <input
           id="search"
           type="text"
@@ -73,25 +115,26 @@ const Notifications = () => {
           className="w-1/2 p-4 border border-gray-800 rounded-md focus:outline-none focus:border-cyan-500"
         />
       </div>
-      {/* List */}
 
+      {/* List */}
       <ul className="flex flex-col items-center gap-4">
-        {resullt.map((item) => (
-          <Link className="shadow-lg py-4 px-8 rounded-lg bg-slate-50 w-1/2">
-            <li key={item.title}>
-              <p className="font-bold text-xl">{item.title}</p>
-              <p>{item.detail}</p>
-              <div className=" mt-2">
-                <p className="font-light text-sm">{item.date}</p>
-                <p className="font-light text-sm">{item.time}</p>
-              </div>
-              <div className=" float-end">
-                <button className="p-4 text-sm rounded-lg font-semibold text-white bg-slate-800 hover:bg-red-600 hover:text-white min-w-32">
-                  Download
-                </button>
-              </div>
-            </li>
-          </Link>
+        {filteredItems.map((item, index) => (
+          <li
+            key={index}
+            className="shadow-lg py-4 px-8 rounded-lg bg-slate-50 w-1/2"
+          >
+            <p className="font-bold text-xl">{item.title}</p>
+            <p>{item.detail}</p>
+            <div className=" mt-2">
+              <p className="font-light text-sm">{item.date}</p>
+              <p className="font-light text-sm">{item.time}</p>
+            </div>
+            <div className=" float-end">
+              <button className="p-4 text-sm rounded-lg font-semibold text-white bg-slate-800 hover:bg-red-600 hover:text-white min-w-32">
+                Download
+              </button>
+            </div>
+          </li>
         ))}
       </ul>
     </div>

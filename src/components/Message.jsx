@@ -2,10 +2,11 @@ import React from "react";
 
 const Message = () => {
   return (
-    <div className="flex justify-evenly flex-wrap w-full p-4 my-10 text-white">
-      {/* <div className="flex flex-col items-center justify-center  ">
-        <h1 className="text-3xl mb-5 font-bold">
-          Vision of Karachi Police Cheif
+    <div className="max-w-6xl mx-auto p-4 my-10 text-white">
+      {/* Uncomment this block if you need to add a vision statement */}
+      {/* <div className="flex flex-col items-center justify-center">
+        <h1 className="text-3xl mb-5 font-bold text-center">
+          Vision of Karachi Police Chief
         </h1>
         <p className="max-w-xl text-justify">
           As Karachi Police Chief, my vision is a safer, more secure city where
@@ -17,11 +18,13 @@ const Message = () => {
         </p>
       </div> */}
 
-      <img
-        className="rounded-lg my-5 object-contain"
-        src="./app.png"
-        alt=""
-      />
+      <div className="flex justify-center">
+        <img
+          className="rounded-lg my-5 object-contain max-w-full"
+          src="./app.png"
+          alt="Karachi Police App"
+        />
+      </div>
     </div>
   );
 };

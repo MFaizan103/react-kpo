@@ -15,7 +15,7 @@ const ContactUs = () => {
     {
       title: "Find Police Offices",
       icon: <BsBuildingsFill size={"48px"} />,
-      link: "/PoliceOffices",
+      link: "",
     },
     {
       title: "Emergency Contact Directory",

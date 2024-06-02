@@ -13,6 +13,8 @@ import PoliceStations from "./pages/PoliceStations.jsx";
 import PoliceOffices from "./pages/PoliceOffice.jsx";
 import Directory from "./pages/Directory.jsx";
 import ComplaintForm from "./pages/ComplainForm.jsx";
+import SearchPerson from "./pages/SearchPerson.jsx";
+import SearchRecoveredMissingChildren from "./pages/SearchRecoveredMissingChildren.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: "/ComplaintForm",
         element: <ComplaintForm />,
+      },
+      {
+        path: "/SearchPerson",
+        element: <SearchPerson />,
+      },
+      {
+        path: "/SearchRecoveredMissingChildren",
+        element: <SearchRecoveredMissingChildren />,
       },
     ],
   },

@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import location from "../data/policeStationsData";
 import { useLocation } from "react-router-dom";
 
-const PoliceOffices = () => {
+const SearchPerson = () => {
   const [query, setQuery] = useState("");
 
   const [items, setItems] = useState(location);
@@ -25,7 +25,7 @@ const PoliceOffices = () => {
   return (
     <div className="flex flex-col items-center container mx-auto px-4">
       <h1 className="text-3xl my-4 text-white font-semibold text-center">
-        Search Police Offices
+        Search Missing Person
       </h1>
       <div className="flex w-full justify-center mb-4">
         <label htmlFor="search" className="sr-only">
@@ -58,19 +58,19 @@ const PoliceOffices = () => {
               <div className="flex flex-col w-full">
                 <h2 className="text-2xl font-bold mb-2"> {item.psName}</h2>
                 <p className="text-xl">
-                  SHO Name & Rank:
+                  Missing Person Name:{" "}
                   <span className="font-bold">{item.rank}</span>
                 </p>
                 <p className="text-xl">
-                  SHO Contact:
+                  Missing Person CNIC/B-Form:{" "}
                   <span className="font-bold">{item.mobileNo}</span>
                 </p>
                 <p className="text-xl">
-                  Head Muharir Name:
+                  Missing Person Father Name:{" "}
                   <span className="font-bold">{item.hmName}</span>
                 </p>
                 <p className="text-xl">
-                  Head Muharir Contact:
+                  Contact No#:{" "}
                   <span className="font-bold">{item.hmCellNo}</span>
                 </p>
                 <p className="text-xl">
@@ -93,4 +93,4 @@ const PoliceOffices = () => {
   );
 };
 
-export default PoliceOffices;
+export default SearchPerson;
