@@ -46,12 +46,16 @@ const Notifications = () => {
   );
 
   return (
-    <div className=" bg-slate-100 py-8 ">
+    <div className="py-8 ">
+      <h1 className="text-center text-3xl text-white font-medium">
+        Notifications
+      </h1>
+
       <div className="flex justify-center  items-center gap-5 p-4  max-w-fit mx-auto ">
-        <button className="p-4 bg-indigo-800 rounded-lg font-semibold shadow-xl text-xl text-white min-w-48">
+        <button className="p-4 bg-red-600 rounded-lg font-semibold shadow-xl text-xl text-white min-w-48">
           Notifications
         </button>
-        <button className="p-4 rounded-lg font-semibold bg-slate-200 hover:bg-indigo-800 hover:text-white text-xl min-w-48">
+        <button className="p-4 rounded-lg font-semibold bg-slate-200 hover:bg-red-600 hover:text-white text-xl min-w-48">
           Orders
         </button>
       </div>

@@ -7,7 +7,6 @@ import Home from "./pages/Home.jsx";
 import Notifications from "./pages/Notifications.jsx";
 import Jobs from "./pages/Jobs.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
-import ContactUs from "./pages/ContactUs.jsx";
 import MissingPersonForm from "./components/MissingPersonForm.jsx";
 import MobileSnatchingForm from "./components/MobileSnatchingForm.jsx";
 import PoliceStations from "./pages/PoliceStations.jsx";
@@ -20,7 +19,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { path: "/Home", element: <Home /> },
+      { path: "/", element: <Home /> },
       { path: "/Notifications", element: <Notifications /> },
       {
         path: "/Jobs",
@@ -30,10 +29,7 @@ const router = createBrowserRouter([
         path: "/AboutUs",
         element: <AboutUs />,
       },
-      {
-        path: "/ContactUs",
-        element: <ContactUs />,
-      },
+
       {
         path: "/MissingPerson",
         element: <MissingPersonForm />,

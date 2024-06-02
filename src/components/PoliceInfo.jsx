@@ -7,33 +7,33 @@ import { FaCar } from "react-icons/fa";
 import Breadcrumbs from "./BreadCrumbs";
 import { useLocation } from "react-router-dom";
 
-const Reporting = () => {
+const PoliceInfo = () => {
   // const { history } = useLocation();
 
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, [history]);
 
-  const reportingData = [
+  const policeInfo = [
     {
       title: "Missing Person",
       icon: <FaPersonCircleQuestion size={"48px"} />,
-      link: "",
+      link: "/MissingPerson",
     },
     {
       title: "Dead Body ",
       icon: <FaPersonFalling size={"48px"} />,
-      link: "",
+      link: "/Traffic",
     },
     {
       title: "Mobile Snatching/Theft",
       icon: <FaMobile size={"48px"} />,
-      link: "",
+      link: "/MobileSnatching",
     },
     {
       title: "Vehicle Theft/Snatching",
       icon: <FaCar size={"48px"} />,
-      link: "",
+      link: "/Certificate",
     },
   ];
 
@@ -43,7 +43,7 @@ const Reporting = () => {
   //   // { name: "Subcategory", url: "/category/subcategory" },
   //   // { name: "Current Page", url: "/category/subcategory/current" },
   // ];
-  return <CardList data={reportingData} heading={"Report"} />;
+  return <CardList data={policeInfo} heading={"Police Info"} />;
 };
 
-export default Reporting;
+export default PoliceInfo;

@@ -9,41 +9,23 @@ import { AiFillSafetyCertificate } from "react-icons/ai";
 import Reporting from "../components/Reporting";
 import TrafficServices from "../components/TrafficServices";
 import SearchPage from "../components/SearchPage";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
-  // const services = [
-  //   {
-  //     title: "Report Service",
-  //     icon: <MdEditDocument size={"48px"} />,
-  //     link: "/Report",
-  //   },
-  //   {
-  //     title: "Traffic Service ",
-  //     icon: <MdTraffic size={"48px"} />,
-  //     link: "/Traffic",
-  //   },
-  //   {
-  //     title: "Search Your Valuables",
-  //     icon: <FaSearch size={"48px"} />,
-  //     link: "/Search",
-  //   },
-  //   {
-  //     title: "Certificate Service",
-  //     icon: <AiFillSafetyCertificate size={"48px"} />,
-  //     link: "/Certificate",
-  //   },
-  // ];
-
   return (
     <>
       {/* <CardList data={services} heading={"Services"} /> */}
-      <ImageSlider />
 
-      <div className="flex flex-col  items-center">
-        <div className="text-center mt-8">
-          <h2 className="text-3xl font-bold">Our Services</h2>
+      <div className="flex flex-col  items-center h-full">
+        <div className="text-center mt-8 flex flex-col justify-center items-center p-8">
+          <img src="/logo.png" alt="logo" width={"150"} />
+          <h1 className="text-2xl text-white font-bold p-8">
+            Welcome to Karachi Police Official Website
+          </h1>
         </div>
-        <Reporting />
+        <h2 className="text-3xl text-white">Our Services</h2>
+        <ContactUs />
+        <Reporting/>
         <TrafficServices />
         <SearchPage />
         <Message />

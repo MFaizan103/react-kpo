@@ -31,8 +31,8 @@ const Jobs = () => {
       link: "/MissingPerson",
     },
   ];
-  return (  
-    <div>
+  return (
+    <div className="h-full">
       <JobCardList data={jobData} />
     </div>
   );

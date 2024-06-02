@@ -1,5 +1,5 @@
 import React from "react";
-import CardList from "../components/CardList";
+import CardList from "./CardList";
 import { FaBuilding } from "react-icons/fa";
 import { BsBuildingsFill } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa6";
@@ -18,14 +18,14 @@ const ContactUs = () => {
       link: "/PoliceOffices",
     },
     {
-      title: "Contact Directory",
+      title: "Emergency Contact Directory",
       icon: <FaPhone size={"48px"} />,
       link: "/Directory",
     },
     {
       title: "Complaints",
       icon: <MdEditDocument size={"48px"} />,
-      link: "/ComplaintForm",
+      link: "",
     },
   ]
   return (

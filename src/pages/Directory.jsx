@@ -32,7 +32,7 @@ const Directory = () => {
 
   return (
     <div className=" flex flex-col py-8 items-center">
-      <h2 className="text-2xl font-bold mb-4">Emergency Contact Directory</h2>
+      <h2 className="text-2xl font-bold mb-4 text-white">Emergency Contact Directory</h2>
       <input
         type="text"
         placeholder="Search..."
@@ -40,7 +40,7 @@ const Directory = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <ul className="divide-y divide-gray-300 w-1/2">
+      <ul className="divide-y divide-gray-300 w-1/2 text-white">
         {filteredContacts.map((contact, index) => (
           <li key={index} className="p-4">
             <div className="flex justify-between p-4">

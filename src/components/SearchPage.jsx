@@ -18,22 +18,22 @@ const SearchPage = () => {
     {
       title: "Missing Person",
       icon: <FaPersonCircleQuestion size={"48px"} />,
-      link: "/Reporting",
+      link: "",
     },
     {
       title: "Dead Body",
       icon: <FaPersonFalling size={"48px"} />,
-      link: "/Traffic",
+      link: "",
     },
     {
       title: "Recovered Mobile",
       icon: <FaMobile size={"48px"} />,
-      link: "/Search",
+      link: "",
     },
     {
       title: "Recovered Vehicle",
       icon: <FaCar size={"48px"} />,
-      link: "/Certificate",
+      link: "",
     },
   ];
 

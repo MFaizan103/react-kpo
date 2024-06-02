@@ -10,7 +10,7 @@ const JobCard = ({ text, detail }) => {
           <p className="font-normal text-sm ">{detail}</p>
         </div>
 
-        <Link className="px-8 py-4 flex items-center justify-center rounded-lg hover:bg-red-600 bg-slate-900 text-white shadow-xl">
+        <Link className="px-8 py-4 flex items-center justify-center rounded-lg hover:bg-red-600 bg-slate-950 text-white shadow-xl">
           Apply
         </Link>
       </div>

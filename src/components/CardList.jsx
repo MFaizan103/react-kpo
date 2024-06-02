@@ -3,8 +3,8 @@ import Card from "./Card";
 
 const CardList = ({ data, heading }) => {
   return (
-    <div className="max-w-3xl py-8 mx-auto">
-      <h1 className="text-center text-3xl font-medium py-8">{heading}</h1>
+    <div className="max-w-3xl my-8 mx-auto">
+      <h1 className="text-center text-2xl text-white font-medium py-8">{heading}</h1>
       <div className="flex gap-8 flex-wrap items-center justify-center ">
         {data.map((item) => (
           <Card
