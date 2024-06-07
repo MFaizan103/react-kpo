@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#0F0030" }}>
       <Header />
-      <div className="flex-1">
+      <div className="flex-1 mt-16">
 
       <Outlet />
       </div>

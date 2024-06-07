@@ -87,8 +87,8 @@ const Notifications = () => {
           className={`p-4 ${
             activeTab === "notifications"
               ? "bg-red-600 text-white"
-              : "bg-slate-200 text-slate-700"
-          } rounded-lg font-semibold shadow-xl lg:text-xl text-white lg:min-w-48 md:min-w-48 sm:min-w-48`}
+              : "bg-slate-200 text-slate-950"
+          } rounded font-semibold shadow-xl lg:text-xl hover:bg-red-600 hover:text-white lg:min-w-48 md:min-w-48 sm:min-w-48`}
         >
           Notifications
         </button>
@@ -97,8 +97,8 @@ const Notifications = () => {
           className={`p-4 ${
             activeTab === "orders"
               ? "bg-red-600 text-white"
-              : "bg-slate-200 text-slate-700"
-          } rounded-lg font-semibold shadow-xl lg:text-xl text-white lg:min-w-48   md:min-w-48 sm:min-w-48`}
+              : "bg-slate-200 text-slate-950"
+          } rounded font-semibold shadow-xl lg:text-xl hover:bg-red-600 hover:text-white lg:min-w-48   md:min-w-48 sm:min-w-48`}
         >
           Orders
         </button>
